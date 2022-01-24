@@ -32,20 +32,21 @@
     background: #ffffff;
     box-shadow:  9px 9px 14px #929292,
              -9px -9px 14px #ffffff;
-    width: 40%;
-    
+    width: 90%;
 }
 
 .form-control{
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
     width: 90%;
     
 }
 
 .btn{
     padding: 5px 10px;
+    border-radius: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: #ffffff;
@@ -73,5 +74,9 @@ h3{
         flex-direction: row;
         align-items: center;
         justify-content: center;
+    }
+
+    .container-box{
+        width: 45%;
     }
 }
