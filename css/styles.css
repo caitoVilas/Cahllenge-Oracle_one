@@ -12,7 +12,7 @@
 .container-footer{
     width: 100%;
     padding: 10px 10px;
-    background-color: red;
+    background-color: rgb(56, 50, 50);
     color: #ffffff;
 }
 
@@ -70,6 +70,21 @@ h3{
 
 textarea{
     resize: none;
+}
+
+.chtm{
+    color: red;
+    font-size: 30px;
+}
+
+.ccss{
+    color: blue;
+    font-size: 30px;
+}
+
+.cjs{
+    color: yellow;
+    font-size: 30px;
 }
 
 @media screen and (min-width: 800px) {
