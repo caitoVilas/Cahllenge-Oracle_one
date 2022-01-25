@@ -29,25 +29,20 @@ function fdecrypt(decrypt){
     })
 }
 
-function validateText(text) {
-    if(text === ""){
-        alert("No has introducido un texto")
-        return false;
-    }else{
-        for (let index = 0; index < text.length; index++) {
-            let codeAscii = text.charAt(index);
-            if (codeAscii < 97 || codeAscii > 122){
-                if(codeAscii === 32){
-                    alert("No se aceptan caracteres en mayusclas ni acentos ni signos")
-                    return false;
-                }
-               
-            }
-            
-        }
-    }
-    return true;
+const validateText = (text) => {
+   if(text === null || text.length === 0){
+    alert("No has introducido un texto");
+    return false;
+   }
+
+   if(!(/^[a-z ]+$/.test(text))){
+    alert("No se aceptan caracteres en mayusclas ni acentos ni signos");
+    return false;
+   }
+   console.log(text)
+   return true;
 }
+
 
 const encriptar = (text) => {
     console.log(`Encriptar ${text}`);
