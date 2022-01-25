@@ -39,13 +39,11 @@ const validateText = (text) => {
     alert("No se aceptan caracteres en mayusclas ni acentos ni signos");
     return false;
    }
-   console.log(text)
    return true;
 }
 
 
 const encriptar = (text) => {
-    console.log(`Encriptar ${text}`);
     let charReplace = [/e/g, /i/g, /a/g, /o/g, /u/g];
     let replaces = ["enter", "imes", "ai", "ober", "ufat"];
     let encryptedText = "";
@@ -53,12 +51,10 @@ const encriptar = (text) => {
        encryptedText = text.replace(charReplace[index], replaces[index]);
        text = encryptedText;
     }
-    console.log(text);
     return text;
 }
 
 const desencriptar = (text) => {
-    console.log(`Desencriptar ${text}`);
     let charReplace = [/enter/g, /imes/g, /ai/g, /ober/g, /ufat/g];
     let replaces = ["e", "i", "a", "o", "u"];
     let desencryptedText = "";
@@ -66,8 +62,20 @@ const desencriptar = (text) => {
         desencryptedText = text.replace(charReplace[index], replaces[index]);
         text = desencryptedText;
     }
-    console.log(text);
     return text;
+}
+
+const fcopy = (copy) => {
+    d.addEventListener("click", (e)=>{
+        if(e.target.matches(copy)){
+            // let _copy = d.getElementById('textbox').value;
+            // _copy.select();
+            // console.log(_copy);
+            let copyText = d.querySelector('#textbox');
+            copyText.select();
+            d.execCommand("copy");
+        }
+    })
 }
 
 
@@ -75,4 +83,5 @@ d.addEventListener("DOMContentLoaded", (e)=>{
 
     fencrypt("#encrypt");
     fdecrypt("#decrypt");
+    fcopy("#copy");
 })
